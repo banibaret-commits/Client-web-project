@@ -15,18 +15,16 @@ const App = () => {
             <CartProvider> 
                 <ReviewsProvider> 
                     <Navbar /> 
-                    
-                    {/* FIX: Changed 'container' to 'container-fluid' to allow 
-                        Home.jsx's internal grid to center the content. */}
-                    <div className="container-fluid mt-4 mb-5"> 
-                        <Routes> 
-                            <Route path="/" element={<Home />} /> 
-                            <Route path="/product/:id" element={<ProductDetail />} /> 
-                            <Route path="/cart" element={<Cart />} /> 
-                            <Route path="/checkout" element={<Checkout />} /> 
-                            <Route path="/order-confirmation" element={<OrderConfirmation />} />
-                        </Routes> 
-                    </div> 
+                    <div className="container mt-4 mb-5 d-flex justify-content-center">
+                     <Routes> 
+                    <Route path="/" element={<Home />} /> 
+                    <Route path="/product/:id" element={<ProductDetail />} /> 
+                    <Route path="/cart" element={<Cart />} /> 
+                    <Route path="/checkout" element={<Checkout />} /> 
+                    <Route path="/order-confirmation" element={<OrderConfirmation />} />
+    </Routes> 
+</div>
+
                     
                     <Footer />
                 </ReviewsProvider>
