@@ -108,16 +108,6 @@ const Home = () => {
                 <small>Max: ${priceRange[1]}</small>
             </div>
         </div>
-
-        {/* Product grid */}
-        <div className="row">
-            {display.map((p) => (
-                <div className="col-md-3 col-sm-6 mb-4" key={p.id}>
-                    <ProductCard product={p} />
-                </div>
-            ))}
-        </div>
-    </div>
-);
+    ); 
 };
 export default Home;

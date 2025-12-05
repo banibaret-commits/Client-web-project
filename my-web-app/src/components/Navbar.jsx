@@ -8,15 +8,15 @@ const Navbar = () => {
   const { totalItems } = useContext(CartContext);
 
   return (
-    <div className="flex items-center gap-2">
-  <img 
-    src={logo} 
-    alt="logo" 
-    style={{ width: "35px", height: "35px" }}
-  />
-  <h1 className="text-2xl font-bold text-pink-700">The Lady’s Market</h1>
-</div>
+    <nav className="navbar">
+      <Link className="navbar-brand text-white" to="/">
+        The Lady's Market
+      </Link>
 
+      <Link className="btn btn-outline-light cart-btn" to="/cart">
+        Cart ({totalItems})
+      </Link>
+    </nav>
   );
 };
 
