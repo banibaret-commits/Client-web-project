@@ -52,68 +52,72 @@ const Home = () => {
     
     const categories = [...new Set(products.map(p => p.category))]; 
 
-    return ( 
-        // Outer wrapper to center the content
-        <div className="row justify-content-center">
-            {/* Inner column to constrain the width (col-lg-10) */}
-            <div className="col-lg-10">
-                <h2 className="mb-3">Products</h2> 
+   return (
+    <div className="container">
 
-                {/* Filters Row */} 
-                <div className="row mb-4"> 
-                    <div className="col-md-4 mb-2"> 
-                        <input 
-                            className="form-control" 
-                            placeholder="Search products..." 
-                            value={search} 
-                            onChange={(e) => setSearch(e.target.value)} 
-                        />
-                    </div> 
-                    <div className="col-md-3 mb-2"> 
-                        <select 
-                            className="form-select" 
-                            onChange={(e) => setCategory(e.target.value)}
-                        > 
-                            <option value="all">All Categories</option> 
-                            {categories.map(c => ( 
-                                <option key={c} value={c}>{c}</option> 
-                            ))} 
-                        </select> 
-                    </div> 
-                    <div className="col-md-3 mb-2"> 
-                        <select 
-                            className="form-select" 
-                            onChange={(e) => setSort(e.target.value)}
-                        > 
-                            <option value="none">Sort By</option> 
-                            <option value="price-low">Price: Low to High</option> 
-                            <option value="price-high">Price: High to Low</option> 
-                            <option value="rating-high">Highest Rating</option>
-                        </select> 
-                    </div> 
-                    <div className="col-md-2 mb-2"> 
-                        <input 
-                            type="range" 
-                            className="form-range" 
-                            min="0" 
-                            max={maxPrice} 
-                            value={priceRange[1]} 
-                            onChange={(e) => setPriceRange([0, Number(e.target.value)])} 
-                        /> 
-                        <small>Max: ${priceRange[1]}</small> 
-                    </div> 
-                </div> 
+        <h2 className="mb-3">Products</h2>
 
-                {/* Products Grid Row */}
-                <div className="row"> 
-                    {display.map(p => ( 
-                        <div className="col-md-3 mb-4" key={p.id}> 
-                            <ProductCard product={p} /> 
-                        </div> 
-                    ))} 
-                </div> 
+        {/* Filters */}
+        <div className="col mb-4">
+            <div className="col-md-4 mb-2">
+                <input
+                    className="form-control"
+                    placeholder="Search products..."
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                />
+            </div>
+
+            <div className="col-md-3 mb-2">
+                <select
+                    className="form-select"
+                    onChange={(e) => setCategory(e.target.value)}
+                >
+                    <option value="all">All Categories</option>
+                    {categories.map(c => (
+                        <option key={c} value={c}>
+                            {c}
+                        </option>
+                    ))}
+                </select>
+            </div>
+
+            <div className="col-md-3 mb-2">
+                <select
+                    className="form-select"
+                    onChange={(e) => setSort(e.target.value)}
+                >
+                    <option value="none">Sort By</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="rating-high">Highest Rating</option>
+                </select>
+            </div>
+
+            <div className="col-md-2 mb-2">
+                <input
+                    type="range"
+                    className="form-range"
+                    min="0"
+                    max={maxPrice}
+                    value={priceRange[1]}
+                    onChange={(e) =>
+                        setPriceRange([0, Number(e.target.value)])
+                    }
+                />
+                <small>Max: ${priceRange[1]}</small>
             </div>
         </div>
-    ); 
+
+        {/* Product grid */}
+        <div className="row">
+            {display.map((p) => (
+                <div className="col-md-3 col-sm-6 mb-4" key={p.id}>
+                    <ProductCard product={p} />
+                </div>
+            ))}
+        </div>
+    </div>
+);
 };
 export default Home;
