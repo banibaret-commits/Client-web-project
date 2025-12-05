@@ -1,6 +1,197 @@
-body { 
-    background: #f7f7f7; 
+/* ---------------------------------------------------------
+   GLOBAL LAYOUT — PASTEL KAWAII FULL-SCREEN FIX
+--------------------------------------------------------- */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+
+  display: block;
+
+  background: linear-gradient(135deg, #ffe6f2, #fff7fb);
+  font-family: "Poppins", "Avenir", sans-serif;
+  color: #444;
 }
- .card img {
-     height: 200px; object-fit: cover;
-     }
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 25px;
+}
+
+/* ---------------------------------------------------------
+   NAVBAR — PINK GRADIENT
+--------------------------------------------------------- */
+.navbar {
+  background: linear-gradient(90deg, #ffb6d5, #ff92c6);
+  padding: 14px 25px !important;
+  border-bottom: 3px solid #ffedf5;
+}
+
+.navbar-brand {
+  font-weight: 700 !important;
+  font-size: 1.4rem;
+  color: white !important;
+  text-shadow: 1px 1px 3px #ff7ebd;
+}
+
+.navbar .btn {
+  background: white !important;
+  color: #ff479a !important;
+  border: 2px solid #ff89c4 !important;
+  font-weight: 600 !important;
+  padding: 6px 14px !important;
+  border-radius: 20px !important;
+}
+
+/* ---------------------------------------------------------
+   PRODUCT CARDS — PROFESSIONAL KAWAII STYLE
+--------------------------------------------------------- */
+.card {
+  border-radius: 20px !important;
+  overflow: hidden;
+  border: none !important;
+
+  background: white;
+  box-shadow: 0 4px 14px rgba(255, 133, 179, 0.25);
+
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(255, 100, 160, 0.35);
+}
+
+.card img {
+  height: 220px;
+  object-fit: cover;
+  background: #fff0f7;
+}
+
+/* Title */
+.card-body h5 {
+  color: #ff2f8b;
+  font-weight: 700 !important;
+}
+
+/* Buttons */
+.card .btn-outline-primary {
+  border-radius: 16px !important;
+  border-color: #ff7bb2 !important;
+  color: #ff469e !important;
+}
+
+.card .btn-outline-primary:hover {
+  background-color: #ff7bb2 !important;
+  color: white !important;
+}
+
+.card .btn-success {
+  background: #ff7bb2 !important;
+  border: none !important;
+  border-radius: 16px !important;
+}
+
+.card .btn-success:hover {
+  background: #ff4fa5 !important;
+}
+
+/* ---------------------------------------------------------
+   BUTTONS — GLOBAL KAWAII BUTTONS
+--------------------------------------------------------- */
+button,
+.btn {
+  border-radius: 20px !important;
+  font-weight: 600 !important;
+  transition: 0.2s;
+}
+
+.btn-primary {
+  background-color: #ff80c7 !important;
+  border-color: #ff4aa3 !important;
+}
+
+.btn-primary:hover {
+  background-color: #ff4aa3 !important;
+}
+
+.btn-success {
+  background-color: #ff7bbb !important;
+}
+
+.btn-danger {
+  background-color: #ff4f8b !important;
+  border: none !important;
+}
+
+.btn-secondary {
+  background-color: #ffb5d9 !important;
+  color: #8a0052 !important;
+  border: none !important;
+}
+
+/* ---------------------------------------------------------
+   FORMS — INPUTS / SELECTS / TEXTAREAS
+--------------------------------------------------------- */
+input,
+select,
+textarea {
+  border-radius: 14px !important;
+  border: 2px solid #ffcbe4 !important;
+  padding: 10px 14px !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #ff94c9 !important;
+  box-shadow: 0 0 0 4px rgba(255, 180, 218, 0.35) !important;
+}
+
+/* ---------------------------------------------------------
+   FOOTER — SOFT PINK BAR
+--------------------------------------------------------- */
+footer {
+  background: #ffb8d8 !important;
+  color: white !important;
+  padding: 20px;
+  border-top: 3px solid #ffedf5;
+  margin-top: 40px;
+  text-shadow: 1px 1px 2px #ff7ebd;
+}
+
+/* ---------------------------------------------------------
+   PRODUCT DETAIL PAGE — IMAGE
+--------------------------------------------------------- */
+.product-detail-image {
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(255, 133, 179, 0.3);
+}
+
+/* ---------------------------------------------------------
+   REVIEW BOXES — CUTE BUBBLES
+--------------------------------------------------------- */
+.review-box {
+  border-radius: 20px;
+  background: white;
+  padding: 15px;
+  border: 2px solid #ffd8eb;
+  box-shadow: 0 3px 12px rgba(255, 150, 190, 0.18);
+}
+
+/* ---------------------------------------------------------
+   CART ITEMS
+--------------------------------------------------------- */
+.cart-item {
+  background: white;
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: 0 3px 12px rgba(255, 160, 195, 0.25);
+  margin-bottom: 15px;
+}
+
+.cart-item img {
+  border-radius: 14px;
+}
