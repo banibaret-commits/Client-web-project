@@ -9,11 +9,13 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
+      <img src={logo} alt="Logo" width="80" height="90" className="me-2" />
       <Link className="navbar-brand text-white" to="/">
         The Lady's Market
       </Link>
+      
 
-      <Link className="btn btn-outline-light cart-btn" to="/cart">
+      <Link className="btn btn-outline-light" to="/cart">
         Cart ({totalItems})
       </Link>
     </nav>
